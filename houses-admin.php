@@ -90,7 +90,7 @@ function houses_admin_enqueue_scripts($hook)
   wp_enqueue_style('bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css');
   // Custom CSS
   wp_enqueue_style('houses-admin-style', plugin_dir_url(__FILE__) . 'assets/css/admin-style.css');
-}
+}goo
 
 // Enqueue styles for front-end booking form
 add_action('wp_enqueue_scripts', 'houses_admin_enqueue_front_scripts');
