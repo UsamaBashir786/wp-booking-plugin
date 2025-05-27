@@ -85,22 +85,17 @@ function houses_admin_save_house($data)
     }
   }
 
-  // Ensure status is always set to 'active' by default if not provided
-  if (!isset($data['status']) || empty($data['status'])) {
-    $data['status'] = 'active';
-  }
-
   $result = $wpdb->insert($table_name, $data, [
-    '%s', // image
-    '%d', // star_rating
-    '%s', // title
-    '%s', // description
-    '%f', // price_per_night
-    '%s', // type
-    '%s', // price_details
-    '%s', // features
-    '%s', // location
-    '%s'  // status
+    '%s',
+    '%d',
+    '%s',
+    '%s',
+    '%f',
+    '%s',
+    '%s',
+    '%s',
+    '%s',
+    '%s'
   ]);
 
   return $result !== false ? $wpdb->insert_id : false;

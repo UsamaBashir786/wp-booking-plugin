@@ -10,11 +10,6 @@ function houses_admin_booking_form_shortcode($atts)
   $atts = shortcode_atts(['house_id' => ''], $atts);
   $house_id = absint($atts['house_id']);
 
-  // Fix: If not set in shortcode, get from URL
-  if (!$house_id && isset($_GET['house_id'])) {
-    $house_id = absint($_GET['house_id']);
-  }
-
   // Validate house_id
   $house = houses_admin_get_house($house_id);
   if (!$house) {
@@ -53,12 +48,9 @@ function houses_admin_booking_form_shortcode($atts)
             (from_date >= %s AND to_date <= %s)
           )",
           $house_id,
-          $from_date,
-          $from_date,
-          $to_date,
-          $to_date,
-          $from_date,
-          $to_date
+          $from_date, $from_date,
+          $to_date, $to_date,
+          $from_date, $to_date
         ));
 
         if ($overlap > 0) {
