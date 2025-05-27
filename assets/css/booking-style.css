@@ -1,0 +1,455 @@
+/* Modern Booking Form Styles */
+
+.booking-form-container {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 2rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.booking-form-container h2 {
+  color: #2d3748;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.booking-subtitle {
+  text-align: center;
+  color: #718096;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+/* Card Styling */
+.booking-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  border: none;
+  padding: 2.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.booking-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Form Elements */
+.form-section {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: #f8fafc;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+}
+
+.form-section h3 {
+  color: #2d3748;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.form-section h3::before {
+  content: "";
+  width: 4px;
+  height: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 2px;
+}
+
+.form-label {
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  display: block;
+}
+
+.form-control,
+.form-select {
+  border: 2px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: white;
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+  outline: none;
+  transform: translateY(-2px);
+}
+
+.form-control:hover,
+.form-select:hover {
+  border-color: #cbd5e0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Guest Counter */
+.guest-counter {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.guest-input-group {
+  text-align: center;
+  padding: 1rem;
+  background: white;
+  border-radius: 10px;
+  border: 2px solid #f1f5f9;
+  transition: all 0.3s ease;
+}
+
+.guest-input-group:hover {
+  border-color: #e2e8f0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.guest-input-group label {
+  display: block;
+  font-weight: 600;
+  color: #4a5568;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.guest-input-group input {
+  width: 80px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #2d3748;
+}
+
+/* Date Inputs */
+.date-inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.date-input-group {
+  position: relative;
+}
+
+.date-input-group::before {
+  content: "📅";
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* User Info Section */
+.user-info-display {
+  background: linear-gradient(135deg, #f0fff4 0%, #e6fffa 100%);
+  border: 2px solid #68d391;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1rem 0;
+}
+
+.user-info-display h4 {
+  color: #22543d;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.user-info-display h4::before {
+  content: "👤";
+  font-size: 1.2rem;
+}
+
+.user-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.user-info-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-info-item strong {
+  color: #2f855a;
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+}
+
+/* Button Styling */
+.btn {
+  border-radius: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%);
+  box-shadow: 0 12px 35px rgba(102, 126, 234, 0.6);
+  transform: translateY(-3px);
+}
+
+.btn-primary:active {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+/* Alert Styling (continued) */
+.alert-success {
+  background: linear-gradient(135deg, #c6f6d5 0%, #9ae6b4 100%);
+  color: #22543d;
+  border: 2px solid #68d391;
+}
+
+.alert-danger {
+  background: linear-gradient(135deg, #fed7d7 0%, #feb2b2 100%);
+  color: #742a2a;
+  border: 2px solid #f56565;
+}
+
+.alert p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* Textarea Styling */
+textarea.form-control {
+  resize: vertical;
+  min-height: 120px;
+  padding: 1rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+textarea.form-control:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+  outline: none;
+  transform: translateY(-2px);
+}
+
+textarea.form-control:hover {
+  border-color: #cbd5e0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Input Groups for User Details (for non-logged-in users) */
+.form-section.user-details {
+  background: linear-gradient(135deg, #fefcbf 0%, #fefcbf 100%);
+  border: 2px solid #f6e05e;
+}
+
+.form-section.user-details h3::before {
+  background: linear-gradient(135deg, #f6e05e 0%, #ed8936 100%);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .booking-form-container {
+    margin: 1rem;
+    padding: 1.5rem;
+    max-width: 100%;
+  }
+
+  .booking-form-container h2 {
+    font-size: 2rem;
+  }
+
+  .booking-card {
+    padding: 1.5rem;
+  }
+
+  .date-inputs {
+    grid-template-columns: 1fr;
+  }
+
+  .guest-counter {
+    grid-template-columns: 1fr;
+  }
+
+  .guest-input-group {
+    padding: 0.75rem;
+  }
+
+  .guest-input-group input {
+    width: 60px;
+  }
+
+  .user-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .btn-primary {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .form-control,
+  .form-select,
+  textarea.form-control {
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .booking-form-container {
+    padding: 1rem;
+  }
+
+  .booking-form-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .booking-card {
+    padding: 1rem;
+  }
+
+  .form-section {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .form-section h3 {
+    font-size: 1rem;
+  }
+
+  .form-label {
+    font-size: 0.8rem;
+  }
+
+  .alert {
+    padding: 1rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* Accessibility Enhancements */
+.form-control:focus,
+.form-select:focus,
+textarea.form-control:focus {
+  outline: 3px solid #667eea;
+  outline-offset: 2px;
+}
+
+.btn-primary:focus {
+  outline: 3px solid #764ba2;
+  outline-offset: 2px;
+}
+
+/* Hover Effects for Interactive Elements */
+.form-section:hover {
+  border-color: #cbd5e0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+
+.guest-input-group input:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+}
+
+/* Smooth Transitions for Form Elements */
+.form-control,
+.form-select,
+textarea.form-control,
+.guest-input-group,
+.form-section,
+.btn-primary {
+  transition: all 0.3s ease;
+}
+
+/* Ensure Form Elements are Readable on All Backgrounds */
+.form-control,
+.form-select,
+textarea.form-control {
+  color: #2d3748;
+  background: #ffffff;
+}
+
+/* Placeholder Styling */
+.form-control::placeholder,
+textarea.form-control::placeholder {
+  color: #a0aec0;
+  font-style: italic;
+  opacity: 0.8;
+}
+/* Guest Total Styling */
+.guest-total {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #4a5568;
+}
+
+.guest-total span {
+  font-weight: 700;
+}
+
+/* Disabled Button Styling */
+.btn-primary:disabled {
+  background: #a0aec0;
+  box-shadow: none;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* Adjust form section padding for better spacing */
+.form-section .mb-3 {
+  margin-bottom: 0 !important;
+}
